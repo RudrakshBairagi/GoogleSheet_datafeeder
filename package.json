@@ -12,7 +12,7 @@
     }
   },
   "bin": {
-    "sheet-feeder": "./bin/cli.js"
+    "sheet-feeder": "bin/cli.js"
   },
   "files": [
     "src",
