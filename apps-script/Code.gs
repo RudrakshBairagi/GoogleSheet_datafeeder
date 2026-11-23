@@ -13,6 +13,24 @@
  * @returns {TextOutput} The reply sent back to whoever made the request.
  */
 function doPost(e) {
-  // For now, just reply "ok" so we can check the connection works.
-  return ContentService.createTextOutput("ok");
+  // Reply with JSON so the caller can check whether it worked.
+  return json({ ok: true });
+}
+
+/**
+ * Turns a JavaScript object into a JSON reply.
+ *
+ * Example: json({ ok: true }) sends back {"ok":true}
+ *
+ * @param {Object} data - Any object we want to send back.
+ * @returns {TextOutput} A reply with the JSON content type set.
+ */
+function json(data) {
+  // JSON.stringify turns { ok: true } into the text '{"ok":true}'
+  const text = JSON.stringify(data);
+
+  // createTextOutput builds the reply; setMimeType tells the caller it's JSON
+  return ContentService
+    .createTextOutput(text)
+    .setMimeType(ContentService.MimeType.JSON);
 }
