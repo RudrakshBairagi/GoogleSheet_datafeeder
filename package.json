@@ -1,21 +1,29 @@
 {
   "name": "sheet-feeder",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Send rows of data to a Google Sheet from Node.js using a Google Apps Script web app. No API keys, no dependencies.",
   "type": "module",
   "main": "./src/index.js",
+  "types": "./src/index.d.ts",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "bin": {
+    "sheet-feeder": "./bin/cli.js"
   },
   "files": [
     "src",
+    "bin",
     "apps-script"
   ],
   "scripts": {
-    "test": "node --test"
+    "test": "node --test test/*.test.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.3.0"
   },
   "keywords": [
     "google-sheets",

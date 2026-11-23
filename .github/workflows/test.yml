@@ -1,0 +1,29 @@
+# Runs the tests on GitHub every time you push or open a pull request.
+# Results appear in the "Actions" tab of the repository.
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Test on every Node.js version the package supports
+        node-version: [18, 20, 22, 24]
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # No "npm install" needed: sheet-feeder has no dependencies
+      - name: Run tests
+        run: npm test
