@@ -1,0 +1,24 @@
+# EditorConfig helps keep code style consistent across different editors.
+# Learn more: https://editorconfig.org
+
+# This is the top-most config file, so editors stop searching parent folders.
+root = true
+
+# Rules for every file in the project
+[*]
+# Use spaces (not tabs) for indentation
+indent_style = space
+# Each indentation level is 2 spaces
+indent_size = 2
+# Use Unix-style line endings (LF), which is standard for JavaScript projects
+end_of_line = lf
+# Save files as UTF-8 so emojis and other languages display correctly
+charset = utf-8
+# Remove extra spaces at the end of lines
+trim_trailing_whitespace = true
+# Always end files with an empty line
+insert_final_newline = true
+
+# Markdown uses two trailing spaces to mean "line break", so keep them
+[*.md]
+trim_trailing_whitespace = false
