@@ -1,0 +1,29 @@
+{
+  "name": "sheet-feeder",
+  "version": "0.1.0",
+  "description": "Send rows of data to a Google Sheet from Node.js using a Google Apps Script web app. No API keys, no dependencies.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "apps-script"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "google-sheets",
+    "apps-script",
+    "spreadsheet",
+    "logging",
+    "webhook"
+  ],
+  "author": "RudrakshBairagi",
+  "license": "MIT"
+}
