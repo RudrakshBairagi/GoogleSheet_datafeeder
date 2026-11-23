@@ -25,5 +25,13 @@
     "webhook"
   ],
   "author": "RudrakshBairagi",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RudrakshBairagi/GoogleSheet_datafeeder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RudrakshBairagi/GoogleSheet_datafeeder/issues"
+  },
+  "homepage": "https://github.com/RudrakshBairagi/GoogleSheet_datafeeder#readme"
 }
